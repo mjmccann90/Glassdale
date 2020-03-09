@@ -1,14 +1,14 @@
-let convictions = []
+let witnesses = []
 
-export const useConvictions = () => {
-    return convictions.slice()
+export const useWitnesses = () => {
+    return witnesses.slice()
 }
 
-export const getConvictions = () => {
+export const getWitnesses = () => {
 
 
     // 1. Request the data the fetch is actually a promise 👇🏻
-    return fetch("https://criminals.glassdale.us/crimes")
+    return fetch("https://criminals.glassdale.us/witnesses")
 
 
         // 2. The CALL BACK FUNCTION that converts the JSON string response to a JavaScript data structure (object or array). The .then are promises as well.👇🏻
@@ -17,9 +17,9 @@ export const getConvictions = () => {
 
         // 3. Do something with the data. The .then are promises as well. 👇🏻
         .then(
-            parsedConvictionsArgument => {
-                console.table(parsedConvictionsArgument)
-                convictions = parsedConvictionsArgument
+            parsedWitnesesArgument => {
+                console.table(parsedWitnesesArgument)
+                witnesses = parsedWitnesesArgument
             }
         )
 }
