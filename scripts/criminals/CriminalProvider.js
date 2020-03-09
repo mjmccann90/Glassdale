@@ -1,8 +1,7 @@
 let criminals = []
 
-export const useCriminals = () => {
-    return criminals.slice()
-}
+export const useCriminals = () => criminals.slice()
+
 
 export const getCriminals = () => {
 
@@ -18,7 +17,6 @@ export const getCriminals = () => {
         // 3. Do something with the data. The .then are promises as well. 👇🏻
         .then(
             parsedCriminalsArgument => {
-                console.table(parsedCriminalsArgument)
                 criminals = parsedCriminalsArgument
             }
         )
