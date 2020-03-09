@@ -1,0 +1,32 @@
+/* .criminal: Controls the top level of criminals styling and can be found on index.  */
+.criminal {
+  border: 3px solid black;
+  padding: 15px;
+  margin: 50px 25px 11px 20px;
+  background-color: #fff;
+}
+
+/* .criminalsContainer: Controls the flexbox which can be found in the index  */
+.criminalsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* #criminal-section controls part of the styling for criminal section found in Criminal.js  */
+#criminal-section {
+  margin-top: 15px;
+  margin-right: 50px;
+  margin-left: 50px;
+  text-align: left;
+  width: 17%;
+  height: 20%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.single-criminal {
+  margin: 10px;
+}
