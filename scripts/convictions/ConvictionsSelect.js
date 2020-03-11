@@ -19,10 +19,15 @@ const ConvictionSelect = () => {
         */
         contentTarget.innerHTML = `
             <select class="dropdown" id="crimeSelect">
+            <option value="0">Please select a crime...</option>
             ${
-            convictions.map(conviction =>
-                `<option  value="${conviction.name}">things not to do... ${conviction.name}</option>`
-            )
+            convictionsCollection.map(singleConviction => {
+                return `
+                        <option
+                            value="${singleConviction.id}">
+                            things not to do...${singleConviction.name}
+                        </option>`
+            })
             }
         </select>
     `
