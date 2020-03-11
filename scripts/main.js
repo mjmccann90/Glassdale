@@ -2,7 +2,7 @@
 // import { getWitnesses } from "./witnesses/WitnessProvider.js"
 
 import { getCriminals } from "./criminals/CriminalProvider.js"
-import CriminalList from "./criminals/CriminalList.js"
+import { CriminalList } from "./criminals/CriminalList.js"
 
 import { getConvictions } from "./convictions/ConvictionProvider.js"
 import ConvictionSelect from "./convictions/ConvictionsSelect.js"
