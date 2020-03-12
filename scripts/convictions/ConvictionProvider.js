@@ -1,25 +1,16 @@
 let convictions = []
 
-export const useConvictions = () => {
-    return convictions.slice()
-}
+export const useConvictions = () => convictions.slice()
 
 export const getConvictions = () => {
-
-
-    // 1. Request the data the fetch is actually a promise 👇🏻
+    /*
+        Load database state into application state with a fetch().
+        Make sure the last `then()` sets the local `convictions`
+        variable to what is in the response from the API.
+    */
     return fetch("https://criminals.glassdale.us/crimes")
-
-
-        // 2. The CALL BACK FUNCTION that converts the JSON string response to a JavaScript data structure (object or array). The .then are promises as well.👇🏻
-        .then(responseFunctionParameter => responseFunctionParameter.json())
-
-
-        // 3. Do something with the data. The .then are promises as well. 👇🏻
-        .then(
-            parsedConvictionsArgument => {
-                console.table(parsedConvictionsArgument)
-                convictions = parsedConvictionsArgument
-            }
-        )
+        .then(response => response.json())
+        .then(parsedConvictions => {
+            convictions = parsedConvictions
+        })
 }

@@ -1,17 +1,21 @@
-/**
- *  Fish which renders individual fish objects as HTML
- */
-const Criminal = (criminalObject) => {
+export const Criminal = (criminalObject) => {
     return `
-    <section id="criminal-section"class="${criminalObject.id}">
-    <div class="single-criminal">
+    <div class="criminal">
+        <h4>${criminalObject.name}</h4>
+        <div class="criminal__details">
+            <p>Convicted for ${criminalObject.conviction}</p>
+            <p>Arrested by ${criminalObject.arrestingOfficer}</p>
+            <p>Incarcerated between: ${criminalObject.incarceration.start} and ${criminalObject.incarceration.end}</p>
+            <p>Known Associates:</p>
+            <ul class="details__associates">
+                ${
+        criminalObject.known_associates.map(singleAssociate => {
+            return `<li>${singleAssociate.name} was ${singleAssociate.alibi}</li>`
+        }).join("")
+        }
+            </ul>
             <p>Age: ${criminalObject.age}</p>
-            <p>Conviction: ${criminalObject.conviction}</p>
-            <p>Incarceration start date: ${new Date(criminalObject.incarceration.start).toLocaleDateString('en-US')}</p>
-            <p>Incarceration end date: ${new Date(criminalObject.incarceration.end).toLocaleDateString('en-US')}</p>
-            </div>
-    </section>
+        </div>
+    </div>
     `
 }
-
-export default Criminal
