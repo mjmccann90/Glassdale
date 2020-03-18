@@ -1,0 +1,34 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "description": "placeholder note one",
+      "date": "3/12/20",
+      "name": "John Doe"
+    },
+    {
+      "id": "2",
+      "description": "placeholder note two",
+      "date": "4/13/20",
+      "name": "Jane Doe"
+    },
+    {
+      "id": "3",
+      "description": "placeholder note three",
+      "date": "5/14/20",
+      "name": "Jack Doe"
+    },
+    {
+      "id": "4",
+      "description": "placeholder note four",
+      "date": "6/15/20",
+      "name": "Jim Doe"
+    },
+    {
+      "id": "5",
+      "description": "placeholder note five",
+      "date": "7/12/20",
+      "name": "Jeff Doe"
+    }
+  ]
+}
